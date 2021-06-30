@@ -113,5 +113,5 @@ bot.on('guildCreate', async guild => {
 })
 
 
-bot.login(process.env.config.TOKEN);
+bot.login(process.env.config.token);
 
