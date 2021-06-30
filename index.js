@@ -2,9 +2,6 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require('./db/config.json');
 const fs = require('fs');
-const { createConnection } = require('mysql');
-let sql;
-
 
 bot.commands = new Discord.Collection();
 
@@ -38,13 +35,9 @@ bot.on("ready", async () => {
     }, 1e4)
 })
 
-
 bot.on("message", async message => {
 
-    
 
-
- 
 
     if (message.author.bot) return;
     if(message.channel.type === "dm") return;
