@@ -5,18 +5,7 @@ const fs = require('fs');
 const { createConnection } = require('mysql');
 let sql;
 
-const db = new createConnection({
-    host: "localhost",
-    password: "",
-    user: "root",
-    database: "kznbot"
-})
 
-db.connect(function (err) {
-    if(err) throw err;
-
-    console.log('Connection établie mysql.')
-})
 bot.commands = new Discord.Collection();
 
 fs.readdir('./cmds/', (err, files) => {
